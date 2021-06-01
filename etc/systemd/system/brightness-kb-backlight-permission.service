@@ -1,0 +1,11 @@
+[Unit]
+Description=Change permission for kb backlight file for use without sudo with xidlehook
+
+[Service]
+
+Type=simple
+ExecStart=/usr/bin/chmod 666 /sys/class/leds/tpacpi::kbd_backlight/brightness
+
+[Install]
+WantedBy=multi-user.target
+

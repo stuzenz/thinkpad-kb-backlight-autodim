@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=idle-kb-dimmer
+Comment=Dim kb brightness on idle
+Exec=xidlehook --timer 4 '~/bin/run_dim_check.sh' '~/bin/run_dim_check_cancel.sh'
+Terminal=false
+Type=Application
