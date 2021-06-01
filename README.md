@@ -21,7 +21,7 @@ Five things needed to do this
 Once you following the instructions you should have five new files as below (swap out my name for your home directory name)
 
 -`/etc/systemd/system/brightness-kb-backlight-permission.service`
--`/home/[YOUR_HOME_DIRECTORY]/.config/autostart/kb_brightness.-`desktop`
+-`/home/[YOUR_HOME_DIRECTORY]/.config/autostart/kb_brightness.desktop`
 -`/home/[YOUR_HOME_DIRECTORY]/bin/run_dim_check.sh`
 -`/home/[YOUR_HOME_DIRECTORY]/bin/run_dim_check_cancel.sh`
 -`/home/[YOUR_HOME_DIRECTORY]/.backlight_state`
