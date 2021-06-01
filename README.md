@@ -18,13 +18,13 @@ Five things needed to do this
 
 - Keep in mind when copying the scripts below that depending on the language and environment it can help reduce weird bugs to have a spare line at the end of each file.
 
-Once you following the instructions you should have five new files as below (swap out my name for your home directory name)
+Once you following the instructions you will have five new files as below (swap out my name for your home directory name)
 
--`/etc/systemd/system/brightness-kb-backlight-permission.service`
--`/home/[YOUR_HOME_DIRECTORY]/.config/autostart/kb_brightness.desktop`
--`/home/[YOUR_HOME_DIRECTORY]/bin/run_dim_check.sh`
--`/home/[YOUR_HOME_DIRECTORY]/bin/run_dim_check_cancel.sh`
--`/home/[YOUR_HOME_DIRECTORY]/.backlight_state`
+- `/etc/systemd/system/brightness-kb-backlight-permission.service`
+- `/home/[YOUR_HOME_DIRECTORY]/.config/autostart/kb_brightness.desktop`
+- `/home/[YOUR_HOME_DIRECTORY]/bin/run_dim_check.sh`
+- `/home/[YOUR_HOME_DIRECTORY]/bin/run_dim_check_cancel.sh`
+- `/home/[YOUR_HOME_DIRECTORY]/.backlight_state`
 
 ## 1. Install xidlehook
 
@@ -68,3 +68,8 @@ May 27 11:27:53 arch-t460p systemd[1]: brightness-kb-backlight-permission.servic
 ```
 
 ## 3. Copy the other files from repo into their correct locations (relative to home)
+
+- `/home/[YOUR_HOME_DIRECTORY]/.config/autostart/kb_brightness.desktop`
+- `/home/[YOUR_HOME_DIRECTORY]/bin/run_dim_check.sh`
+- `/home/[YOUR_HOME_DIRECTORY]/bin/run_dim_check_cancel.sh`
+- `/home/[YOUR_HOME_DIRECTORY]/.backlight_state`
