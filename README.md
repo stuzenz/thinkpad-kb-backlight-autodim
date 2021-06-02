@@ -1,5 +1,15 @@
 # Setting the keyboard backlight to turn off and on based on the idle trigger and a time delay
 
+**Table of Contents**
+
+- [Setting the keyboard backlight to turn off and on based on the idle trigger and a time delay](#setting-the-keyboard-backlight-to-turn-off-and-on-based-on-the-idle-trigger-and-a-time-delay)
+  - [Overview](#overview)
+  - [1. Install xidlehook](#1-install-xidlehook)
+  - [2. Create a service that only changes the permission on the file `/sys/class/leds/tpacpi::kbd_backlight/brightness`](#2-create-a-service-that-only-changes-the-permission-on-the-file-sysclassledstpacpikbd_backlightbrightness)
+  - [3. Copy the other files from repo into their correct locations (relative to home)](#3-copy-the-other-files-from-repo-into-their-correct-locations-relative-to-home)
+
+## Overview
+
 The below gives you an approach to set a timer to turn off the keyboard back light from when you have last touched the input devices (touchpad/keyboard/mouse). The keyboard back light will then return to its original state when coming out of idle mode.
 
 This approach below works for thinkpads - I suspect this will work on non-Thinkpads too - with this line changed to whatever works for other products. 
@@ -32,10 +42,10 @@ Once you following the instructions you will have five new files as below (swap 
 
 `paru -S xidlehook`
 
-You can test it by trying this command 
+You can test it by trying this command
+
 `sudo xidlehook --timer 3 'echo 0 | tee /sys/class/leds/tpacpi::kbd_backlight/brightness' 'echo 1 | tee /sys/class/leds/tpacpi::kbd_backlight/brightness'`
 
-​
 ## 2. Create a service that only changes the permission on the file `/sys/class/leds/tpacpi::kbd_backlight/brightness`
 
 Linux resets the permission on this file on each reboot - so this gets the permission back to a permissions state where we can write to the file without needing sudo
@@ -45,7 +55,7 @@ Copy the script into
 
 Once it is copied do the following to make sure the service is registered
 
-```
+```bash
 ➜ sudo systemctl daemon-reload
 
 ~ 
